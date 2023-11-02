@@ -1,0 +1,37 @@
+/* Sidebar.css */
+
+/* Style for the sidebar container */
+.sidebar {
+    background-color: #333; /* Background color for the sidebar */
+    color: #fff; /* Text color */
+    width: 200px; /* Width of the sidebar */
+    height: 100%; /* Make it cover the entire height */
+    position: fixed; /* Fixed position so it stays on the side */
+    top: 0;
+    left: 0;
+    overflow-y: auto; /* Add vertical scroll if needed */
+}
+
+/* Style for the list items */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Style for the list item buttons */
+.sidebar li button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    padding: 15px 20px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 20px; /* Set the font size to 50px */
+}
+
+/* Hover effect for the buttons */
+.sidebar li button:hover {
+    background-color: #555; /* Darken the background on hover */
+}

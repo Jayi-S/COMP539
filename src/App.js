@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import URLShortenComponent from './URLShortenComponent';
+import Account from './account/account';
+import Login from './login/login';
+import Data from'./data/data'
 
 function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+       
+        <Route path="/" element=
+          {<div className="container">
+                <URLShortenComponent />
+         </div>}/>
+        <Route path="/Account" element={<Account />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Data" element={<Data/>} />
+     
+        
+
+        {/* </Route> */}
+      </Routes>
+    </BrowserRouter>
+
   );
+
 }
 
 export default App;
+
+
+
+
+  //       return (
+  //           <div className = "container">
+  //               <URLShortenComponent />
+  //           </div>
+        
+  //       );
+  //   }
+  // export default App; 

@@ -1,0 +1,37 @@
+/* Sidebar.css */
+
+
+.sidebar {
+    background-color: #333; 
+    color: #fff; 
+    width: 200px; 
+    height: 100%; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    overflow-y: auto; 
+}
+
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+.sidebar li button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    padding: 15px 20px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 20px; 
+}
+
+
+.sidebar li button:hover {
+    background-color: #555; 
+}

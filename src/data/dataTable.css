@@ -1,0 +1,15 @@
+.app-container {
+  display: flex;
+}
+
+.data-content {
+  margin-left: 200px; /* Assuming your sidebar is 200px wide */
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box; /* Makes sure padding is included in width */
+}
+
+
+
+
+  

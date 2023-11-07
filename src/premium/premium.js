@@ -12,6 +12,10 @@ const Premium = ({ onChoosePlan }) => {
           <p>Free</p>
           <ul>
             <li>Alias short</li>
+            <li>-</li>
+            <li>-</li>
+            <li>-</li>
+            <li>-</li>
         
           </ul>
           <button onClick={() => onChoosePlan('basic')}>Choose Plan</button>
@@ -23,6 +27,10 @@ const Premium = ({ onChoosePlan }) => {
           <p>$20/month</p>
           <ul>
             <li>Alias short</li>
+            <li>magic AI</li>
+            <li>customized service</li>
+            <li>-</li>
+            <li>-</li>
             
           </ul>
           <button onClick={() => onChoosePlan('standard')}>Choose Plan</button>
@@ -34,6 +42,10 @@ const Premium = ({ onChoosePlan }) => {
           <p>$40/month</p>
           <ul>
             <li>Alias short</li>
+            <li>magic AI</li>
+            <li>customized service</li>
+            <li>Analyse board</li>
+            <li>24/7 phone and email support</li>
      
           </ul>
           <button onClick={() => onChoosePlan('premium')}>Choose Plan</button>

@@ -1,53 +1,87 @@
-
-
 .app-container {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    min-height: 100vh; 
-    padding: 10px 20px;
-  }
-  
-  .login-content {
-    width: 100%;
-    max-width: 400px; 
-    margin: 0 auto; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    border-radius: 8px; 
-    background-color: #ffffff; 
-  }
-  
-  .form-group {
-    margin-bottom: 1rem;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-  
-  input[type="text"],
-  input[type="password"] {
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem; 
-    border: 1px solid #ccc; 
-    border-radius: 0.25rem; 
-  }
-  
-  button {
-    width: 100%; 
-    padding: 0.5rem 1rem;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 0.25rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease; 
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 10px;
+  background-color: #f2f2f2;
+
+}  
+.form-group {
+  margin-bottom: 1rem; /* Reduced from 1.5rem to 1rem */
+}
+
+
+
+.login-content {
+  width: 100%;
+  max-width: 500px;
+  margin: auto; /* Ensures margin on all sides */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 2rem; /* Adds more padding around the form */
+}
+
+.form-group {
+  margin-bottom: 1.5rem; /* Adds more space between inputs */
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333; /* Slightly darker font for better readability */
+  font-weight: 600; /* Makes labels bold */
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.75rem; /* Increases padding for a larger click area */
+  margin-bottom: 1.5rem; /* Increases margin for more space */
+  border: 2px solid #ccc; /* Makes the border slightly thicker */
+  border-radius: 5px; /* Rounds the borders more noticeably */
+  box-sizing: border-box;
+  font-size: 1rem; /* Ensures text is easily readable */
+  transition: border-color 0.2s ease-in-out; /* Smooth transition for border color */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #007bff; /* Changes border color on focus */
+  outline: none; /* Removes the default focus outline */
+}
+.button-container {
+  display: flex; /* This will align the buttons side by side */
+  justify-content: space-between; /* This will put some space between the buttons */
+  gap: 10px; /* This adds space between the buttons */
+}
+
+button {
+  flex: 1; /* This will allow the buttons to grow and take up equal space */
+  /* Remove width: 100% from the button style if it exists */
+  /* Other button styles */
+}
+
+
+button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: #0056b3; /* Slightly darker button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem; /* Matches input text size */
+  font-weight: 600; /* Makes the button text bold */
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the button */
+  display: flex;
+}
+
+button:hover {
+  background-color: #004190; /* Even darker shade on hover */
+}
+
   
   

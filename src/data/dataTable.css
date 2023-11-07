@@ -1,15 +1,70 @@
 .app-container {
   display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: flex-start; /* Align content to the top */
+  max-width: 1200px; /* Max width of the container */
+  margin: 0 auto; /* Center the container */
+  padding: 20px;
+  background-color: #f4f4f4; /* Light grey background for the app container */
 }
 
 .data-content {
-  margin-left: 200px; /* Assuming your sidebar is 200px wide */
-  padding: 20px;
+  margin-top: 20px; /* Space between sidebar and content */
+  background-color: #fff; /* White background for content area */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for content */
+  border-radius: 8px; /* Rounded corners for content */
+  overflow-x: auto; /* Allows table to scroll on small screens */
+  width: calc(100% - 40px); /* Calculate width with padding */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.data-table {
+  border-collapse: collapse; /* Collapse borders */
+  width: 100%; /* Full width tables */
+  min-width: 600px; /* Minimum table width */
+}
+
+.data-table th,
+.data-table td {
+  text-align: left; /* Align text to the left */
+  padding: 12px; /* Padding in table cells */
+  border-bottom: 1px solid #ddd; /* Border for cells */
+}
+
+.data-table th {
+  background-color: #007bff; /* Blue background for headers */
+  color: #ffffff; /* White text for headers */
+}
+
+.data-table tr:nth-child(even) {
+  background-color: #f2f2f2; /* Zebra striping for rows */
+}
+
+.data-table tr:hover {
+  background-color: #ddd; /* Hover effect for rows */
+}
+
+/* Chart container to make it responsive */
+.chart-container {
+  margin-top: 20px;
   width: 100%;
-  box-sizing: border-box; /* Makes sure padding is included in width */
+  padding: 20px;
+  background-color: #fff; /* White background for the chart */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for chart */
+  border-radius: 8px; /* Rounded corners for chart */
+}
+
+/* Responsive settings for the chart */
+@media (max-width: 768px) {
+  .data-content, .chart-container {
+    width: 95%;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 
 
 
-  
+

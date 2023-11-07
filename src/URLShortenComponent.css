@@ -1,96 +1,137 @@
 /* URLShortenComponent.css */
-/*cbafc2*/
-.concept {
+/* Base color palette */
+:root {
+    --primary-color: #007bff; /* Blue shade for button and links */
+    --hover-color: #0056b3; /* Darker blue for hover state */
+    --input-bg-color: #fff; /* White background for inputs */
+    --input-border-color: #ced4da; /* Grey border for inputs */
+    --main-bg-color: #f8f9fa; /* Light grey background for app */
+    --text-main: #212529; /* Main text color */
+    --text-secondary: #6c757d; /* Secondary text color */
+    --error-color: #dc3545; /* Error color for messages or icons */
+    --success-color: #28a745; /* Success color for messages or icons */
+}
 
-    padding: 0px;
-    border-radius: 0px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+/* General reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--main-bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* Container for the entire component */
+.concept {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 75vh;
-    margin-top: 0; /* Remove the space at the top */
+    height: auto;
+    margin-top: 1rem;
+    background-color: var(--input-bg-color);
+    margin-left: 200px; /* 留出Sidebar的宽度 */
 }
-
 
 /* Heading style */
 .concept h2 {
-    color: #000000;
-    font-size: 80px;
-    margin-bottom: 20px;
-    background-color: #dfcde1; /* Add a background color */
-    padding: 10px 20px; /* Add padding to create a box around the text */
-    border-radius: 10px; /* Add rounded corners */
-    color: #070707; /* Text color */
-    text-align: center;
-    width: fit-content; /* Make the box width fit the content */
+    color: var(--text-main);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background-color: var(--input-border-color);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    display: inline-block; /* Wrap the background around the text */
 }
 
-/* Style for the main input field and select element */
+/* Style for the main container */
 .concept .main-container {
     width: 100%;
-    max-width: 400px; /* Adjust the maximum width as needed */
-    margin-bottom: 10px; /* Increased margin for spacing */
+    max-width: 400px;
+    margin: 1rem auto; /* Center the container */
 }
-
-/* URLShortenComponent.css */
-
-/* Container for the entire component */
-/* Concept.css */
-
-
 
 /* Style for the button */
 .concept button {
-    background-color: #007bff;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--input-bg-color);
     border: none;
-    border-radius: 10px;
-    padding: 15px 20px;
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
     width: 100%;
-    margin-top: 15px; /* Add margin to the top to push it down */
-}
-
-/* Style for the main input field and select element */
-.concept .main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 400px; /* Adjust the maximum width as needed */
-    margin-bottom: 15px; /* Adjust spacing between elements */
-}
-
-/* Concept.css */
-
-/* Style for the input fields and select element */
-.concept input[type="text"],
-.concept select,
-.concept input[name="desiredURL"] {
-    width: 100%; /* Set the same width for all input elements */
-    padding: 15px; /* Increased padding */
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #fff;
-    font-size: 20px; /* Increased font size */
+    font-weight: bold; /* Make the text bold */
 }
 
 /* Hover effect for the button */
 .concept button:hover {
-    background-color: #87acd4;
+    background-color: var(--hover-color);
 }
 
+/* Style for the input fields and select element */
+.concept input[type="text"],
+.concept select {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--input-border-color);
+    border-radius: 0.5rem;
+    background-color: var(--input-bg-color);
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
 
 /* Style for the paragraph displaying the shortened URL */
 .concept p {
-    margin-top: 20px;
-    font-size: 40px;
+    margin-left: 200px; 
+
+    font-size: 1.25rem;
     font-weight: bold;
-    word-break: break-all; /* Ensure long URLs break properly */
+    word-break: break-all;
+    color: var(--success-color);
+
+
     
+    /* ... (other styles) */
+}
+
+
+/* Style for the information section */
+.information {
+    background-color: var(--primary-color);
+    color: var(--input-bg-color);
+    text-align: center;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+
+
+
+
+
+
+/* Style for the information heading */
+.information h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Style for the information paragraph */
+.information p {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    line-height: 1.6;
 }

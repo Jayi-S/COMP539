@@ -39,7 +39,10 @@ function Login() {
               placeholder="user" 
             />
           </div>
-          <button type="submit">Login</button>
+          <div className="button-container">
+          <button type="button">Register</button>
+             <button type="submit">Login</button>
+              </div>
         </form>
       </div>
     </div>

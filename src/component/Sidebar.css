@@ -1,23 +1,22 @@
-/* Sidebar.css */
-
-
 .sidebar {
+    z-index: 1000;
     background-color: #333; 
     color: #fff; 
     width: 200px; 
-    height: 100%; 
+    height: 100vh; /* Use viewport height to ensure full height */
     position: fixed; 
     top: 0;
     left: 0;
     overflow-y: auto; 
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
 }
-
 
 .sidebar ul {
     list-style: none;
     padding: 0;
+    flex: 1; /* Make ul grow to fill space */
 }
-
 
 .sidebar li button {
     background-color: transparent;
@@ -31,7 +30,16 @@
     font-size: 20px; 
 }
 
-
 .sidebar li button:hover {
     background-color: #555; 
 }
+
+/* Additional styles for logout button */
+.sidebar .logout {
+    position: absolute; /* 绝对定位 */
+    bottom: 0; /* 定位到底部 */
+    width: 100%; /* 如果你想要宽度与sidebar相匹配 */
+    z-index: 999;
+    
+
+  }

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import Sidebar from '../component/Sidebar'; 
-import './account.css'; 
+import Premium from '../premium/premium'; // Adjusted to go up one directory and then into the premium directory
+// Import the Premium component
+import './account.css';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 const Account = () => {
-
   const [userData, setUserData] = useState({
     username: 'user',
     phone: '123-456-7890',
@@ -11,20 +13,28 @@ const Account = () => {
     zipCode: '12345'
   });
 
+  // const navigate = useNavigate(); // Hook for navigation
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUserData({ ...userData, [name]: value });
   };
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
-
     console.log('Updated user data:', userData);
+    // Potentially navigate to a different route after update
+    // navigate('/updated');
+  };
+
+  const handlePlanChoice = (plan) => {
+    console.log(`User chose the ${plan} plan.`);
+    // Here you can navigate to a payment page or perform other actions
+    // navigate(`/choose-plan/${plan}`);
   };
 
   return (
+    <>
     <div className="account-container">
       <Sidebar /> 
       <form className="account-form" onSubmit={handleSubmit}>
@@ -67,11 +77,17 @@ const Account = () => {
         </label>
         <button type="submit">Update Information</button>
       </form>
+    
+      
     </div>
+    <Premium onChoosePlan={handlePlanChoice} />
+    </>
   );
 };
 
 export default Account;
+
+
 
 
 

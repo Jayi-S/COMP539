@@ -51,7 +51,7 @@ function URLShortenComponent() {
                             value={desiredUrl}
                             onChange={e => setDesiredUrl(e.target.value)}
                             className="input-field"
-                            disabled // Disable the input field
+                            disabled 
                         />
                     )}
                     <button onClick={generateShortUrl}>Generate Shorten URL</button>

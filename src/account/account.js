@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import Sidebar from '../component/Sidebar'; 
-import Premium from '../premium/premium'; // Adjusted to go up one directory and then into the premium directory
-// Import the Premium component
+import Premium from '../premium/premium'; 
 import './account.css';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom'; 
 
 const Account = () => {
   const [userData, setUserData] = useState({
@@ -13,7 +12,7 @@ const Account = () => {
     zipCode: '12345'
   });
 
-  // const navigate = useNavigate(); // Hook for navigation
+  // const navigate = useNavigate(); 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,13 +22,13 @@ const Account = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Updated user data:', userData);
-    // Potentially navigate to a different route after update
+  
     // navigate('/updated');
   };
 
   const handlePlanChoice = (plan) => {
     console.log(`User chose the ${plan} plan.`);
-    // Here you can navigate to a payment page or perform other actions
+   
     // navigate(`/choose-plan/${plan}`);
   };
 

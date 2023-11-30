@@ -23,7 +23,7 @@ function App() {
     if(val){
       sessionStorage.setItem('loginInfo',JSON.stringify(val))
     }else{
-      message.success('注销成功！')
+      message.success('registar!！')
       sessionStorage.removeItem('loginInfo')
     }
     init()

@@ -4,7 +4,7 @@ import Footer from './component/Footer';
 import './URLShortenComponent.css';
 
 
-function URLShortenComponent() {
+function URLShortenComponent({loginStatus}) {
     const [longUrl, setLongUrl] = useState("");
     const [urlType, setUrlType] = useState("magic");
     const [shortUrl, setShortUrl] = useState("");
@@ -16,7 +16,7 @@ function URLShortenComponent() {
 
     return (
         <>
-            <Sidebar />
+            <Sidebar loginStatus={loginStatus} />
             <div className="concept">
                 <h2>Shorten Me</h2>
                 <div className="main-container">
@@ -58,10 +58,10 @@ function URLShortenComponent() {
                 </div>
                 <p>Shortened URL: {shortUrl}</p>
             </div>
-            <div className='information'>
+            {/* <div className='information'>
                 <h2>Simple and fast URL shortener!</h2>
                 <p>ShortURL allows to shorten long links from Instagram, Facebook, YouTube, Twitter, Linked In, WhatsApp, TikTok, blogs and sites. Just paste the long URL and click the Shorten URL button. On the next page, copy the shortened URL and share it on sites, chat and emails. After shortening the URL, check how many clicks it received.</p>
-            </div>
+            </div> */}
             <Footer />
         </>
     );

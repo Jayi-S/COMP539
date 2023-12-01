@@ -56,7 +56,7 @@ function URLShortenComponent({loginStatus}) {
                     )}
                     <button onClick={generateShortUrl}>Generate Shorten URL</button>
                 </div>
-                <p>Shortened URL: {shortUrl}</p>
+                <p className="shortened-url">Shortened URL: {shortUrl}</p>
             </div>
             {/* <div className='information'>
                 <h2>Simple and fast URL shortener!</h2>

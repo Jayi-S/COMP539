@@ -99,10 +99,6 @@ body {
     font-weight: bold;
     word-break: break-all;
     color: var(--success-color);
-
-
-    
-    /* ... (other styles) */
 }
 
 
@@ -135,3 +131,10 @@ body {
     margin-top: 1rem;
     line-height: 1.6;
 }
+
+.shortened-url {
+    width: 80%; /* This should match the width of your input fields and button */
+    margin: 10px auto; /* This centers the paragraph and adds some space above and below */
+    text-align: center; 
+}
+

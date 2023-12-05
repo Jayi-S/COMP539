@@ -55,8 +55,8 @@ useEffect(()=>{
           </Form.Item>
           <Form.Item {...tailLayout}>
             <Space>
-              <Button type="primary" htmlType="submit"> Submit </Button>
-              <Button htmlType="button" onClick={()=>{navigate('/registry')}}> Registry  </Button>
+              <Button type="primary" htmlType="submit"> Log in </Button>
+              <Button htmlType="button" onClick={()=>{navigate('/registry')}}> Sign up  </Button>
             </Space>
           </Form.Item>
         </Form>
